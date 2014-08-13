@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Case Maker.xcodeproj">
+      location = "self:ZPatterns.xcodeproj">
    </FileRef>
 </Workspace>

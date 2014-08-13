@@ -1,3 +1,12 @@
+//
+//  ViewController.swift
+//  ZPatterns
+//
+//  Created by Matt Appleby on 8/13/14.
+//  Copyright (c) 2014 Zazzle. All rights reserved.
+//
+
+import UIKit
 
 import UIKit
 import QuartzCore
@@ -8,7 +17,6 @@ class ViewController : UIViewController, UIGestureRecognizerDelegate, UIScrollVi
     @IBOutlet var sv : UIScrollView!
     @IBOutlet var content : TiledView!
     @IBOutlet weak var phoneMask: UIImageView!
-    var color = UIColor.redColor()
     
     @IBAction func handleButton(sender: AnyObject) {
         println("Yo")
@@ -99,6 +107,5 @@ class TiledView : UIView {
         CGContextFillPath(context)
         CGContextDrawPath(context, kCGPathFill)
     }
-
+    
 }
-

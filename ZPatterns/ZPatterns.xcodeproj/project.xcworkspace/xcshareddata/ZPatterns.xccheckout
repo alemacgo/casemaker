@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FF5A98D2-E754-49D1-9A35-14DE9B39E8F3</string>
+	<string>E100C5F6-ED74-43E4-9DC9-F26920CA242B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Case Maker</string>
+	<string>ZPatterns</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>92E2011517AA84D73B6A65825DBEA92297B501D1</key>
 		<string>https://github.com/mightymata/casemaker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Case Maker/Case Maker.xcodeproj/project.xcworkspace</string>
+	<string>ZPatterns/ZPatterns.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>92E2011517AA84D73B6A65825DBEA92297B501D1</key>

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00567F6A1995BA0900CB6283"
-               BuildableName = "Case Maker.app"
-               BlueprintName = "Case Maker"
-               ReferencedContainer = "container:Case Maker.xcodeproj">
+               BlueprintIdentifier = "00991C42199BDBE900E0A201"
+               BuildableName = "ZPatterns.app"
+               BlueprintName = "ZPatterns"
+               ReferencedContainer = "container:ZPatterns.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00567F8E1995BA0900CB6283"
-               BuildableName = "Case MakerTests.xctest"
-               BlueprintName = "Case MakerTests"
-               ReferencedContainer = "container:Case Maker.xcodeproj">
+               BlueprintIdentifier = "00991C54199BDBE900E0A201"
+               BuildableName = "ZPatternsTests.xctest"
+               BlueprintName = "ZPatternsTests"
+               ReferencedContainer = "container:ZPatterns.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00567F8E1995BA0900CB6283"
-               BuildableName = "Case MakerTests.xctest"
-               BlueprintName = "Case MakerTests"
-               ReferencedContainer = "container:Case Maker.xcodeproj">
+               BlueprintIdentifier = "00991C54199BDBE900E0A201"
+               BuildableName = "ZPatternsTests.xctest"
+               BlueprintName = "ZPatternsTests"
+               ReferencedContainer = "container:ZPatterns.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00567F6A1995BA0900CB6283"
-            BuildableName = "Case Maker.app"
-            BlueprintName = "Case Maker"
-            ReferencedContainer = "container:Case Maker.xcodeproj">
+            BlueprintIdentifier = "00991C42199BDBE900E0A201"
+            BuildableName = "ZPatterns.app"
+            BlueprintName = "ZPatterns"
+            ReferencedContainer = "container:ZPatterns.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00567F6A1995BA0900CB6283"
-            BuildableName = "Case Maker.app"
-            BlueprintName = "Case Maker"
-            ReferencedContainer = "container:Case Maker.xcodeproj">
+            BlueprintIdentifier = "00991C42199BDBE900E0A201"
+            BuildableName = "ZPatterns.app"
+            BlueprintName = "ZPatterns"
+            ReferencedContainer = "container:ZPatterns.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00567F6A1995BA0900CB6283"
-            BuildableName = "Case Maker.app"
-            BlueprintName = "Case Maker"
-            ReferencedContainer = "container:Case Maker.xcodeproj">
+            BlueprintIdentifier = "00991C42199BDBE900E0A201"
+            BuildableName = "ZPatterns.app"
+            BlueprintName = "ZPatterns"
+            ReferencedContainer = "container:ZPatterns.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

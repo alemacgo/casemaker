@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Case Maker.xcscheme</key>
+		<key>ZPatterns.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00567F6A1995BA0900CB6283</key>
+		<key>00991C42199BDBE900E0A201</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>00567F8E1995BA0900CB6283</key>
+		<key>00991C54199BDBE900E0A201</key>
 		<dict>
 			<key>primary</key>
 			<true/>
