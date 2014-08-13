@@ -11,17 +11,15 @@
 		00567F711995BA0900CB6283 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F701995BA0900CB6283 /* CoreGraphics.framework */; };
 		00567F731995BA0900CB6283 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F721995BA0900CB6283 /* UIKit.framework */; };
 		00567F791995BA0900CB6283 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00567F771995BA0900CB6283 /* InfoPlist.strings */; };
-		00567F7B1995BA0900CB6283 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00567F7A1995BA0900CB6283 /* main.m */; };
-		00567F7F1995BA0900CB6283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00567F7E1995BA0900CB6283 /* AppDelegate.m */; };
 		00567F821995BA0900CB6283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00567F801995BA0900CB6283 /* Main.storyboard */; };
-		00567F851995BA0900CB6283 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00567F841995BA0900CB6283 /* FirstViewController.m */; };
-		00567F881995BA0900CB6283 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00567F871995BA0900CB6283 /* SecondViewController.m */; };
 		00567F8A1995BA0900CB6283 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00567F891995BA0900CB6283 /* Images.xcassets */; };
 		00567F911995BA0900CB6283 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F901995BA0900CB6283 /* XCTest.framework */; };
 		00567F921995BA0900CB6283 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F6E1995BA0900CB6283 /* Foundation.framework */; };
 		00567F931995BA0900CB6283 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F721995BA0900CB6283 /* UIKit.framework */; };
 		00567F9B1995BA0900CB6283 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00567F991995BA0900CB6283 /* InfoPlist.strings */; };
 		00567F9D1995BA0900CB6283 /* Case_MakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00567F9C1995BA0900CB6283 /* Case_MakerTests.m */; };
+		42361906199B0037001F7363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42361905199B0037001F7363 /* ViewController.swift */; };
+		42361908199B0111001F7363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42361907199B0111001F7363 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,21 +39,16 @@
 		00567F721995BA0900CB6283 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		00567F761995BA0900CB6283 /* Case Maker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Case Maker-Info.plist"; sourceTree = "<group>"; };
 		00567F781995BA0900CB6283 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		00567F7A1995BA0900CB6283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00567F7C1995BA0900CB6283 /* Case Maker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Case Maker-Prefix.pch"; sourceTree = "<group>"; };
-		00567F7D1995BA0900CB6283 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		00567F7E1995BA0900CB6283 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		00567F811995BA0900CB6283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		00567F831995BA0900CB6283 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		00567F841995BA0900CB6283 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		00567F861995BA0900CB6283 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		00567F871995BA0900CB6283 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		00567F891995BA0900CB6283 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		00567F8F1995BA0900CB6283 /* Case MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Case MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00567F901995BA0900CB6283 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		00567F981995BA0900CB6283 /* Case MakerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Case MakerTests-Info.plist"; sourceTree = "<group>"; };
 		00567F9A1995BA0900CB6283 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00567F9C1995BA0900CB6283 /* Case_MakerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case_MakerTests.m; sourceTree = "<group>"; };
+		42361905199B0037001F7363 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42361907199B0111001F7363 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +108,9 @@
 		00567F741995BA0900CB6283 /* Case Maker */ = {
 			isa = PBXGroup;
 			children = (
-				00567F7D1995BA0900CB6283 /* AppDelegate.h */,
-				00567F7E1995BA0900CB6283 /* AppDelegate.m */,
+				42361907199B0111001F7363 /* AppDelegate.swift */,
+				42361905199B0037001F7363 /* ViewController.swift */,
 				00567F801995BA0900CB6283 /* Main.storyboard */,
-				00567F831995BA0900CB6283 /* FirstViewController.h */,
-				00567F841995BA0900CB6283 /* FirstViewController.m */,
-				00567F861995BA0900CB6283 /* SecondViewController.h */,
-				00567F871995BA0900CB6283 /* SecondViewController.m */,
 				00567F891995BA0900CB6283 /* Images.xcassets */,
 				00567F751995BA0900CB6283 /* Supporting Files */,
 			);
@@ -133,7 +122,6 @@
 			children = (
 				00567F761995BA0900CB6283 /* Case Maker-Info.plist */,
 				00567F771995BA0900CB6283 /* InfoPlist.strings */,
-				00567F7A1995BA0900CB6283 /* main.m */,
 				00567F7C1995BA0900CB6283 /* Case Maker-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -254,10 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00567F881995BA0900CB6283 /* SecondViewController.m in Sources */,
-				00567F7F1995BA0900CB6283 /* AppDelegate.m in Sources */,
-				00567F851995BA0900CB6283 /* FirstViewController.m in Sources */,
-				00567F7B1995BA0900CB6283 /* main.m in Sources */,
+				42361908199B0111001F7363 /* AppDelegate.swift in Sources */,
+				42361906199B0037001F7363 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +448,7 @@
 				00567FA21995BA0900CB6283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00567FA31995BA0900CB6283 /* Build configuration list for PBXNativeTarget "Case MakerTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +457,7 @@
 				00567FA51995BA0900CB6283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
