@@ -68,6 +68,7 @@ class TiledView : UIView {
     [super setContentScaleFactor:1.f];
     }
     */
+    
     let red = UIColor(red: 0.885, green: 0.425, blue: 0.425, alpha: 1.000)
     let yellow = UIColor.yellowColor()
     var dotColor = UIColor(red: 0.885, green: 0.425, blue: 0.425, alpha: 1.000)
@@ -98,28 +99,6 @@ class TiledView : UIView {
         CGContextFillPath(context)
         CGContextDrawPath(context, kCGPathFill)
     }
-    
-    /*
-    override func drawRect(r: CGRect) {
-        // println("drawRect: \(r)") // bug? not thread-safe! gives garbled output
-        
-        let tile = r
-        let x = Int(tile.origin.x/TILESIZE)
-        let y = Int(tile.origin.y/TILESIZE)
-        NSLog("drawRect: %@", NSStringFromCGRect(r))
 
-        //let tileName = NSString(format:"CuriousFrog_500_\(x+3)_\(y)")
-        //let path = NSBundle.mainBundle().pathForResource(tileName, ofType:"png")
-        //let image = UIImage(contentsOfFile:path)
-        let image = UIImage(named:"greencircle")
-        
-        image.drawAtPoint(CGPointMake(CGFloat(x)*TILESIZE,CGFloat(y)*TILESIZE))
-        
-        // in real life, comment out the following! it's here just so we can see the tile boundaries
-        
-        //        let bp = UIBezierPath(rect: r)
-        //        UIColor.whiteColor().setStroke()
-        //        bp.stroke()
-    }*/
 }
 

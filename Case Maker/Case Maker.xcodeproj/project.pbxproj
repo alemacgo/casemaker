@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0039F44C199B0959008FC674 /* CoolPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039F44B199B0959008FC674 /* CoolPatternView.swift */; };
 		00567F6F1995BA0900CB6283 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F6E1995BA0900CB6283 /* Foundation.framework */; };
 		00567F711995BA0900CB6283 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F701995BA0900CB6283 /* CoreGraphics.framework */; };
 		00567F731995BA0900CB6283 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00567F721995BA0900CB6283 /* UIKit.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0039F44B199B0959008FC674 /* CoolPatternView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolPatternView.swift; sourceTree = "<group>"; };
 		00567F6B1995BA0900CB6283 /* Case Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Case Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00567F6E1995BA0900CB6283 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00567F701995BA0900CB6283 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +110,7 @@
 		00567F741995BA0900CB6283 /* Case Maker */ = {
 			isa = PBXGroup;
 			children = (
+				0039F44B199B0959008FC674 /* CoolPatternView.swift */,
 				42361907199B0111001F7363 /* AppDelegate.swift */,
 				42361905199B0037001F7363 /* ViewController.swift */,
 				00567F801995BA0900CB6283 /* Main.storyboard */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42361908199B0111001F7363 /* AppDelegate.swift in Sources */,
+				0039F44C199B0959008FC674 /* CoolPatternView.swift in Sources */,
 				42361906199B0037001F7363 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
