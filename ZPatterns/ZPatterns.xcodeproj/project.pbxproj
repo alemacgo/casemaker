@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0015E04919A5182200FB1417 /* CoolPatternView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0015E04819A5182200FB1417 /* CoolPatternView.m */; };
 		00569434199EE44900DBD236 /* UIPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00569433199EE44900DBD236 /* UIPattern.swift */; };
 		00569436199EE46000DBD236 /* UIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00569435199EE46000DBD236 /* UIPath.swift */; };
 		00991C49199BDBE900E0A201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C48199BDBE900E0A201 /* AppDelegate.swift */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0015E04719A5182200FB1417 /* CoolPatternView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolPatternView.h; sourceTree = "<group>"; };
+		0015E04819A5182200FB1417 /* CoolPatternView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolPatternView.m; sourceTree = "<group>"; };
 		00569433199EE44900DBD236 /* UIPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPattern.swift; sourceTree = "<group>"; };
 		00569435199EE46000DBD236 /* UIPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPath.swift; sourceTree = "<group>"; };
 		00991C43199BDBE900E0A201 /* ZPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +95,8 @@
 		00991C45199BDBE900E0A201 /* ZPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				0015E04719A5182200FB1417 /* CoolPatternView.h */,
+				0015E04819A5182200FB1417 /* CoolPatternView.m */,
 				00991C67199BDCAF00E0A201 /* Main.storyboard */,
 				00991C48199BDBE900E0A201 /* AppDelegate.swift */,
 				00991C4A199BDBE900E0A201 /* TileViewController.swift */,
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0015E04919A5182200FB1417 /* CoolPatternView.m in Sources */,
 				00569436199EE46000DBD236 /* UIPath.swift in Sources */,
 				00991C4B199BDBE900E0A201 /* TileViewController.swift in Sources */,
 				00991C49199BDBE900E0A201 /* AppDelegate.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import QuartzCore
 
+
 class TileView : UIView {
     let TILESIZE: CGFloat
     let pattern: UIPattern
@@ -50,37 +51,40 @@ class TileView : UIView {
     
     override func drawRect(r: CGRect) {
         let ctx: CGContextRef = UIGraphicsGetCurrentContext()
+        let scale: CGFloat = CGContextGetCTM(ctx).a
+        let tiledLayer: CATiledLayer = self.layer as CATiledLayer
+        let tileSize: CGSize = tiledLayer.tileSize
+        
         let x = r.origin.x
         let y = r.origin.y
         
         // debug println
         var debug = false
-        if (x==160 && y==160) {
+        if (x==0 && y==0) {
             debug = true
         }
         
-        let scale:CGFloat = CGContextGetCTM(ctx).a
+//        tileSize.width /= scale
+//        tileSize.height /= scale
+//        let col = floorf(CGRectGetMinX(r) / tileSize.width)
+//        let row = floorf(CGRectGetMinY(r) / tileSize.height)
+        
         let size = r.width
         let info = "\(x)\t\t\(y)\t\t Scale: \(scale) \t\t Size: \(size)"
         if(debug) { println(info) }
 
-
-        if (scale <= 1) {            // if we are zooming out
+        // if we are zooming out
+        if (scale <= 1) {
             var factor = (Int(size/TILESIZE))
             if (debug) { println("Factor: \(factor)") }
             
             CGContextTranslateCTM(ctx, x, y)
-            for r in 0..<factor {
-                for c in 0..<factor {
-                    if (debug) {
-                        println("\(r),\(c)")
-                        println("\(x + CGFloat(r)*TILESIZE), \(y + CGFloat(c)*TILESIZE)")
-                        println("\(CGContextGetCTM(ctx).tx), \(CGContextGetCTM(ctx).ty)\n")
-                    }
-                    pattern.renderPatternGridToContext(ctx, factor: factor)
-                }
-            }
-        } else {                    // if we are zooming in
+            pattern.renderPatternGridToContext(ctx, factor: factor)
+            
+        }
+            
+        // if we are zooming in
+        else {
             CGContextTranslateCTM(ctx, translateOrigin(x), translateOrigin(y))
             pattern.renderPatternToContext(ctx)
         }
