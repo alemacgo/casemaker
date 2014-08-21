@@ -23,12 +23,11 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
 
         sv.addSubview(contentView)
         
-        sv.contentSize = CGRectInfinite.size
+//        sv.contentSize = CGRectInfinite.size
         sv.delegate = self
         content = contentView
         
         sv.contentOffset = CGPoint(x: content.frame.size.width/2-sv.bounds.width/2 , y: content.frame.size.height/2-sv.bounds.height/2)
-        
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer!, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer!) -> Bool {
