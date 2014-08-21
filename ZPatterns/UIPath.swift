@@ -49,4 +49,8 @@ class UIPath : NSObject {
         
         translatedPaths = pathArray
     }
+    
+    func setColor(color: UIColor) {
+        self.color = color
+    }
 }

@@ -52,31 +52,34 @@ class TileView : UIView {
     override func drawRect(r: CGRect) {
         let ctx: CGContextRef = UIGraphicsGetCurrentContext()
         let scale: CGFloat = CGContextGetCTM(ctx).a
-        let tiledLayer: CATiledLayer = self.layer as CATiledLayer
-        let tileSize: CGSize = tiledLayer.tileSize
+//        let tiledLayer: CATiledLayer = self.layer as CATiledLayer
+//        var tileSize: CGSize = tiledLayer.tileSize
         
         let x = r.origin.x
         let y = r.origin.y
         
         // debug println
-        var debug = false
-        if (x==0 && y==0) {
-            debug = true
-        }
+//        var debug = false
+//        if (x==0 && y==0) {
+//            debug = true
+//        }
         
 //        tileSize.width /= scale
 //        tileSize.height /= scale
-//        let col = floorf(CGRectGetMinX(r) / tileSize.width)
-//        let row = floorf(CGRectGetMinY(r) / tileSize.height)
+//        let col: CGFloat = floor(CGRectGetMinX(r) / tileSize.width)
+//        let row: CGFloat = floor(CGRectGetMinY(r) / tileSize.height)
+//        var tileRect = CGRectMake(tileSize.width * col, tileSize.height * row, tileSize.width, tileSize.height);
+//        tileRect = CGRectIntersection(self.bounds, tileRect)
         
-        let size = r.width
-        let info = "\(x)\t\t\(y)\t\t Scale: \(scale) \t\t Size: \(size)"
-        if(debug) { println(info) }
+        let size = max(r.width,r.height)
+        
+//        let info = "\(x)\t\t\(y)\t\t Scale: \(scale) \t\t Size: \(size)"
+//        if(debug) { println(info) }
 
         // if we are zooming out
         if (scale <= 1) {
             var factor = (Int(size/TILESIZE))
-            if (debug) { println("Factor: \(factor)") }
+//            if (debug) { println("Factor: \(factor)") }
             
             CGContextTranslateCTM(ctx, x, y)
             pattern.renderPatternGridToContext(ctx, factor: factor)
@@ -89,9 +92,11 @@ class TileView : UIView {
             pattern.renderPatternToContext(ctx)
         }
         
-        UIColor.greenColor().set()
-        CGContextSetLineWidth(ctx, 6.0/scale)
-        CGContextStrokeRect(ctx, r)
+        
+//        UIColor.greenColor().set()
+//        CGContextSetLineWidth(ctx, 6.0/scale)
+//        var outline = CGRectMake(0,0, r.width, r.height)
+//        CGContextStrokeRect(ctx, outline)
     }
     
     func translateOrigin(i: CGFloat) -> CGFloat {

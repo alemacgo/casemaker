@@ -10,10 +10,10 @@ import UIKit
 import QuartzCore
 
 class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScrollViewDelegate {
-    @IBOutlet var sv : UIScrollView!
+    @IBOutlet var sv : InfiniteScrollView!
     @IBOutlet var content : TileView!
-    @IBOutlet weak var phoneMask: UIImageView!
-//    @IBOutlet weak var colorMask: UIView!
+    @IBOutlet var invertedMask: UIImageView!
+
     
     let TILESIZE :CGFloat = 80
     
@@ -26,9 +26,8 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         sv.contentSize = CGRectInfinite.size
         sv.delegate = self
         content = contentView
-//        colorMask.maskView = contentView
         
-        sv.contentOffset = CGPoint(x: content.frame.size.width/2, y: content.frame.size.height/2)
+        sv.contentOffset = CGPoint(x: content.frame.size.width/2-sv.bounds.width/2 , y: content.frame.size.height/2-sv.bounds.height/2)
         
     }
     
@@ -36,18 +35,17 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         return true
     }
     
-    @IBAction func handlePinch(sender: UIPinchGestureRecognizer) {
-        content.transform = CGAffineTransformScale(content.transform, sender.scale, sender.scale)
-        sender.scale = 1
-    }
-
-    @IBAction func handleRotate(sender: UIRotationGestureRecognizer) {
-        if abs(sender.rotation) > 0.005 {
-            content.transform = CGAffineTransformRotate(content.transform, sender.rotation)
-        }
-        sender.rotation = 0
-    }
-    
+//    @IBAction func handlePinch(sender: UIPinchGestureRecognizer) {
+//        content.transform = CGAffineTransformScale(content.transform, sender.scale, sender.scale)
+//        sender.scale = 1
+//    }
+//
+//    @IBAction func handleRotate(sender: UIRotationGestureRecognizer) {
+//        if abs(sender.rotation) > 0.005 {
+//            content.transform = CGAffineTransformRotate(content.transform, sender.rotation)
+//        }
+//        sender.rotation = 0
+//    }
     
     func scrollViewDidEndZooming(scrollView: UIScrollView!, withView view: UIView!, atScale scale: CGFloat) {
         println(scale);
@@ -57,5 +55,32 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     func viewForZoomingInScrollView(scrollView: UIScrollView!) -> UIView! {
         return content
     }
+    
+    @IBOutlet var hue: UISlider!
+    @IBAction func hueSliderChanged(sender: UISlider) {
+        println("Hue: \(sender.value)")
+        var currColor = content.pattern.color
+        content.pattern.setPatternColor(UIPattern.patternColor(hue: CGFloat(sender.value), saturation: currColor.saturation, brightness: currColor.brightness))
+        content.setNeedsDisplay()
+    }
+    
+    @IBOutlet var saturation: UISlider!
+    @IBAction func saturationSliderChanged(sender: UISlider) {
+        println("Saturation: \(sender.value)")
+        var currColor = content.pattern.color
+        content.pattern.setPatternColor(UIPattern.patternColor(hue: currColor.hue, saturation: CGFloat(sender.value), brightness: currColor.brightness))
+        content.setNeedsDisplay()
+    }
+    
+    @IBOutlet var brightness: UISlider!
+    @IBAction func brightnessSliderChanged(sender: UISlider) {
+        println("Brightness: \(sender.value)")
+        var currColor = content.pattern.color
+        content.pattern.setPatternColor(UIPattern.patternColor(hue: currColor.hue, saturation: currColor.saturation, brightness: CGFloat(sender.value)))
+        content.setNeedsDisplay()
+    }
+    
+    
+    
 }
 

@@ -10,6 +10,7 @@
 		0015E04919A5182200FB1417 /* CoolPatternView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0015E04819A5182200FB1417 /* CoolPatternView.m */; };
 		00569434199EE44900DBD236 /* UIPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00569433199EE44900DBD236 /* UIPattern.swift */; };
 		00569436199EE46000DBD236 /* UIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00569435199EE46000DBD236 /* UIPath.swift */; };
+		0087BA5C19A5AC65002E0D7B /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087BA5B19A5AC65002E0D7B /* InfiniteScrollView.swift */; };
 		00991C49199BDBE900E0A201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C48199BDBE900E0A201 /* AppDelegate.swift */; };
 		00991C4B199BDBE900E0A201 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C4A199BDBE900E0A201 /* TileViewController.swift */; };
 		00991C50199BDBE900E0A201 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00991C4F199BDBE900E0A201 /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 		0015E04819A5182200FB1417 /* CoolPatternView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolPatternView.m; sourceTree = "<group>"; };
 		00569433199EE44900DBD236 /* UIPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPattern.swift; sourceTree = "<group>"; };
 		00569435199EE46000DBD236 /* UIPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPath.swift; sourceTree = "<group>"; };
+		0087BA5B19A5AC65002E0D7B /* InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		00991C43199BDBE900E0A201 /* ZPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00991C47199BDBE900E0A201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00991C48199BDBE900E0A201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				00991C48199BDBE900E0A201 /* AppDelegate.swift */,
 				00991C4A199BDBE900E0A201 /* TileViewController.swift */,
 				00991C6D199C293E00E0A201 /* TileView.swift */,
+				0087BA5B19A5AC65002E0D7B /* InfiniteScrollView.swift */,
 				00991C4F199BDBE900E0A201 /* Images.xcassets */,
 				00991C46199BDBE900E0A201 /* Supporting Files */,
 				00991C69199BE71700E0A201 /* ZPatterns-Bridging-Header.h */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0015E04919A5182200FB1417 /* CoolPatternView.m in Sources */,
+				0087BA5C19A5AC65002E0D7B /* InfiniteScrollView.swift in Sources */,
 				00569436199EE46000DBD236 /* UIPath.swift in Sources */,
 				00991C4B199BDBE900E0A201 /* TileViewController.swift in Sources */,
 				00991C49199BDBE900E0A201 /* AppDelegate.swift in Sources */,
