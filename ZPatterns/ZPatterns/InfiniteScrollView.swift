@@ -11,7 +11,7 @@ import Foundation
 class InfiniteScrollView : UIScrollView {
     override init() {
         super.init()
-        self.contentSize = CGSizeMake(4800, 4800)
+        self.contentSize = CGSizeMake(8000, 8000)
         println("init1")
     }
     
@@ -24,7 +24,7 @@ class InfiniteScrollView : UIScrollView {
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
         println("init3")
-        self.contentSize = CGSizeMake(4800, 4800)
+        self.contentSize = CGSizeMake(8000, 8000)
     }
     
     func recenterIfNecessary() {
@@ -36,13 +36,13 @@ class InfiniteScrollView : UIScrollView {
         var XdistanceFromCenter = fabs(currentOffset.x - centerOffsetX)
         var YdistanceFromCenter = fabs(currentOffset.y - centerOffsetY)
         
-        if (XdistanceFromCenter > (contentWidth/4)) {
+        if (XdistanceFromCenter > (contentWidth/8)) {
             self.contentOffset = CGPointMake(centerOffsetX, currentOffset.y)
             
             // move content here
         }
         
-        if (YdistanceFromCenter > (contentWidth/4)) {
+        if (YdistanceFromCenter > (contentWidth/8)) {
             self.contentOffset = CGPointMake(currentOffset.x, centerOffsetY)
             
             // move content here

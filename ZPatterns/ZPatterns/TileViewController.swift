@@ -18,7 +18,7 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     let TILESIZE :CGFloat = 80
     
     override func viewDidLoad() {
-        let f = CGRectMake(0,0,CGFloat(60)*TILESIZE, CGFloat(60)*TILESIZE)
+        let f = CGRectMake(0,0,CGFloat(100)*TILESIZE, CGFloat(100)*TILESIZE)
         let contentView = TileView(frame:f, tilesize: TILESIZE)
 
         sv.addSubview(contentView)
