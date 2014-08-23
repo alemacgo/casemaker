@@ -202,17 +202,17 @@ class UIPattern {
     
     func renderPatternToContext(context: CGContextRef) {
         if (!paths!.isEmpty) {
-            for p in paths! {
-                p.renderToContext(context)
+            for path in paths! {
+                path.renderToContext(context)
             }
         }
     }
     
     func renderPatternGridToContext(context: CGContextRef, factor: Int) {
-        for r in 0..<factor {
-            for c in 0..<factor {
+        for row in 0..<factor {
+            for coloumn in 0..<factor {
                 for p in paths! {
-                    p.translatedPaths![r][c].renderToContext(context)
+                    p.translatedPaths![row][coloumn].renderToContext(context)
                 }
             }
         }
