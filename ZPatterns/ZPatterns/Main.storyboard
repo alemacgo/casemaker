@@ -17,7 +17,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" delaysContentTouches="NO" minimumZoomScale="0.125" maximumZoomScale="16" id="kG4-76-Ez8" customClass="InfiniteScrollView" customModule="ZPatterns" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" id="kG4-76-Ez8" customClass="InfiniteScrollView" customModule="ZPatterns" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -57,9 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="brightness" destination="1bB-C7-ubC" id="f3W-zS-zxk"/>
-                        <outlet property="content" destination="kh9-bI-dsS" id="N8Y-89-fWs"/>
                         <outlet property="hue" destination="Gay-Yw-xdK" id="YZO-g2-lEp"/>
-                        <outlet property="invertedMask" destination="JvL-7s-se7" id="yhm-il-0oW"/>
                         <outlet property="saturation" destination="Pvo-uM-kq1" id="c3l-EP-xJu"/>
                         <outlet property="sv" destination="kG4-76-Ez8" id="kM4-z4-jos"/>
                     </connections>

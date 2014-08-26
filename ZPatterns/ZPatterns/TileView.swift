@@ -52,24 +52,10 @@ class TileView : UIView {
     override func drawRect(r: CGRect) {
         let ctx: CGContextRef = UIGraphicsGetCurrentContext()
         let scale: CGFloat = CGContextGetCTM(ctx).a
-//        let tiledLayer: CATiledLayer = self.layer as CATiledLayer
-//        var tileSize: CGSize = tiledLayer.tileSize
         
         let x = r.origin.x
         let y = r.origin.y
         
-        // debug println
-//        var debug = false
-//        if (x==0 && y==0) {
-//            debug = true
-//        }
-        
-//        tileSize.width /= scale
-//        tileSize.height /= scale
-//        let col: CGFloat = floor(CGRectGetMinX(r) / tileSize.width)
-//        let row: CGFloat = floor(CGRectGetMinY(r) / tileSize.height)
-//        var tileRect = CGRectMake(tileSize.width * col, tileSize.height * row, tileSize.width, tileSize.height);
-//        tileRect = CGRectIntersection(self.bounds, tileRect)
         
         let size = max(r.width,r.height)
         
@@ -93,10 +79,10 @@ class TileView : UIView {
         }
         
         
-//        UIColor.greenColor().set()
-//        CGContextSetLineWidth(ctx, 6.0/scale)
-//        var outline = CGRectMake(0,0, r.width, r.height)
-//        CGContextStrokeRect(ctx, outline)
+        UIColor.greenColor().set()
+        CGContextSetLineWidth(ctx, 6.0/scale)
+        var outline = CGRectMake(0,0, r.width, r.height)
+        CGContextStrokeRect(ctx, outline)
     }
     
     func translateOrigin(i: CGFloat) -> CGFloat {
