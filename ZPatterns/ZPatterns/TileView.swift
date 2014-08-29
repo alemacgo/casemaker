@@ -51,9 +51,9 @@ class TileView : UIView {
     
     override func drawRect(r: CGRect) {
         let ctx: CGContextRef = UIGraphicsGetCurrentContext()
-        let scale: CGFloat = CGContextGetCTM(ctx).a
+        let scale: CGFloat = CGContextGetCTM(ctx).a     // gets the current scale from the context
         
-        let x = r.origin.x
+        let x = r.origin.x  // gets the origin coordinates of the current tile in the CATiledLayer
         let y = r.origin.y
         
         
@@ -78,13 +78,16 @@ class TileView : UIView {
             pattern.renderPatternToContext(ctx)
         }
         
-        
-        UIColor.greenColor().set()
-        CGContextSetLineWidth(ctx, 6.0/scale)
-        var outline = CGRectMake(0,0, r.width, r.height)
-        CGContextStrokeRect(ctx, outline)
+       // Uncomment to see outlines around tiles in the CATiledLayer
+//        UIColor.greenColor().set()
+//        CGContextSetLineWidth(ctx, 6.0/scale)
+//        var outline = CGRectMake(0,0, r.width, r.height)
+//        CGContextStrokeRect(ctx, outline)
     }
     
+    // Translates the origin to the maximum multiple of the Tilesize that is
+    // still less than the i. For example if the tilesize is 80 and the given
+    // i is 300 this will return 240.
     func translateOrigin(i: CGFloat) -> CGFloat {
         return i - i%TILESIZE
     }

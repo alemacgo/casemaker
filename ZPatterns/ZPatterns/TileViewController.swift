@@ -18,14 +18,17 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     
     override func viewDidLoad() {
         let f = CGRectMake(0,0,CGFloat(100)*TILESIZE, CGFloat(100)*TILESIZE)
-        let contentView = TileView(frame:f, tilesize: TILESIZE)
-
-        sv.addSubview(contentView)
-        sv.delegate = self
-        content = contentView
+        let MyTileView = TileView(frame:f, tilesize: TILESIZE)
         
+        sv.addSubview(MyTileView)   // adds the TileView to the scrollview
+        sv.delegate = self          // sets the scrollview's delegate to this controller
+        content = MyTileView        // sets the instance variable content to the MyTileView
+        
+        // center the TileView in the scrollview
         centerContentOffset = CGPoint(x: content.frame.size.width/2-sv.bounds.width/2 , y: content.frame.size.height/2-sv.bounds.height/2)
         sv.contentOffset = centerContentOffset
+        
+        // ** Custom Gesture Recognizers implemented programatically **
         
 //        var panRecognizer = UIPanGestureRecognizer(target: self, action: "panDetected:")
 //        self.view.addGestureRecognizer(panRecognizer)
@@ -90,37 +93,46 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         return radians * Float(180.0)/Float(M_PI)
     }
     
+    func degreesToRadians (degrees: Float) -> Float {
+        return Float(M_PI)*degrees/(Float(180.0))
+    }
+    
+    
+    // Rounds to the nearest multiple of param:multiple. There is still a problem with
+    // this method in that it does not account for the way in which iOS and CGAffineTransforms
+    // work. Rotations to the right go from 0 to pi and to the left go from 0 to -pi. So in a
+    // few situations, the angle to lock to does is not actually the closest multiple.
+    func round(num: CGFloat, multiple: CGFloat) -> CGFloat {
+        var temp: CGFloat = num % multiple
+        if (fabs(temp) < fabs(multiple / 2)) {
+            return num - temp
+        } else {
+            return num + multiple - temp
+        }
+    }
+    
     func tapDetected(tapRecognizer: UITapGestureRecognizer) {
-//        var t: CGAffineTransform = self.content.transform
-//        var currentRotationAngleInRadians: Float = atan2f(Float(t.b), Float(t.a))
+//        var radian:CGFloat = (content.valueForKeyPath("layer.transform.rotation.z") as CGFloat)
+//
+//        println("Radians: \(radian/CGFloat(M_PI))pi")
+//        println("Degrees: \(radiansToDegrees(Float(radian)))")
+//
+//        let lockAngle: CGFloat = CGFloat(M_PI_4)
+//        var newAngle = round(radian, multiple: lockAngle)
 //        
-//        let lockDegreeInRadians: Float = radiansToDegrees(Float(45.0))
-//        
-//        var nearestMultipleOfLockDegree = currentRotationAngleInRadians/lockDegreeInRadians
-//        var multipleRemainder = currentRotationAngleInRadians % lockDegreeInRadians
-//        
-//        if (multipleRemainder > lockDegreeInRadians/2) {
-//            nearestMultipleOfLockDegree++
-//        }
-//        
-//        let angle = nearestMultipleOfLockDegree * lockDegreeInRadians
+//        var angle = newAngle - radian     // gets the angle to rotate by subtracting the original angle from the desired angle
         
         UIView.animateWithDuration(0.4, animations: {
 //            self.sv.contentOffset = self.centerContentOffset
-//            self.content.transform = CGAffineTransformRotate(self.content.transform, CGFloat(angle))
-            self.content.transform = CGAffineTransformIdentity
+//            self.content.transform = CGAffineTransformIdentity
+            self.content.transform = CGAffineTransformRotate(self.content.transform, CGFloat(M_PI))
         })
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer!, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer!) -> Bool {
         return true
     }
-    
-//    @IBAction func handlePinch(sender: UIPinchGestureRecognizer) {
-//        content.transform = CGAffineTransformScale(content.transform, sender.scale, sender.scale)
-//        sender.scale = 1
-//    }
-//
+
 //    @IBAction func handleRotate(sender: UIRotationGestureRecognizer) {
 //        if abs(sender.rotation) > 0.005 {
 //            content.transform = CGAffineTransformRotate(content.transform, sender.rotation)
@@ -128,7 +140,6 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
 //        sender.rotation = 0
 //    }
     
-//    
 //    func scrollViewDidEndZooming(scrollView: UIScrollView!, withView view: UIView!, atScale scale: CGFloat) {
 //        println(scale);
 //        content.setNeedsDisplay()
@@ -138,11 +149,16 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
 //        return content
 //    }
     
+    
+    
+    // IBOutlets from Main.storyboard for the UISliders that control
+    // Hue, Saturation, and Brightness
+    
     @IBOutlet var hue: UISlider!
     @IBAction func hueSliderChanged(sender: UISlider) {
         println("Hue: \(sender.value)")
         var currColor = content.pattern.color
-        content.pattern.setPatternColor(UIPattern.patternColor(hue: CGFloat(sender.value), saturation: currColor.saturation, brightness: currColor.brightness))
+        content.pattern.setPatternColor(UIPattern.PatternColor(hue: CGFloat(sender.value), saturation: currColor.saturation, brightness: currColor.brightness))
         content.setNeedsDisplay()
     }
     
@@ -150,7 +166,7 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBAction func saturationSliderChanged(sender: UISlider) {
         println("Saturation: \(sender.value)")
         var currColor = content.pattern.color
-        content.pattern.setPatternColor(UIPattern.patternColor(hue: currColor.hue, saturation: CGFloat(sender.value), brightness: currColor.brightness))
+        content.pattern.setPatternColor(UIPattern.PatternColor(hue: currColor.hue, saturation: CGFloat(sender.value), brightness: currColor.brightness))
         content.setNeedsDisplay()
     }
     
@@ -158,7 +174,7 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBAction func brightnessSliderChanged(sender: UISlider) {
         println("Brightness: \(sender.value)")
         var currColor = content.pattern.color
-        content.pattern.setPatternColor(UIPattern.patternColor(hue: currColor.hue, saturation: currColor.saturation, brightness: CGFloat(sender.value)))
+        content.pattern.setPatternColor(UIPattern.PatternColor(hue: currColor.hue, saturation: currColor.saturation, brightness: CGFloat(sender.value)))
         content.setNeedsDisplay()
     }
     
