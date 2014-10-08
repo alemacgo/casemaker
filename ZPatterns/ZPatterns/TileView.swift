@@ -34,7 +34,7 @@ class TileView : UIView {
     }
     
     // appeasing the compiler, don't use this initializer
-    required init(coder: NSCoder!) {
+    required init(coder: NSCoder) {
         TILESIZE = 40
         pattern = UIPattern()
         super.init(coder: coder)

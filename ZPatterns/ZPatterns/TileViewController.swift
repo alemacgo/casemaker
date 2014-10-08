@@ -89,14 +89,6 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         rotationRecognizer.rotation = 0.0
     }
     
-    func radiansToDegrees (radians: Float) -> Float {
-        return radians * Float(180.0)/Float(M_PI)
-    }
-    
-    func degreesToRadians (degrees: Float) -> Float {
-        return Float(M_PI)*degrees/(Float(180.0))
-    }
-    
     
     // Rounds to the nearest multiple of param:multiple. There is still a problem with
     // this method in that it does not account for the way in which iOS and CGAffineTransforms
@@ -148,37 +140,6 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
 //    func viewForZoomingInScrollView(scrollView: UIScrollView!) -> UIView! {
 //        return content
 //    }
-    
-    
-    
-    // IBOutlets from Main.storyboard for the UISliders that control
-    // Hue, Saturation, and Brightness
-    
-    @IBOutlet var hue: UISlider!
-    @IBAction func hueSliderChanged(sender: UISlider) {
-        println("Hue: \(sender.value)")
-        var currColor = content.pattern.color
-        content.pattern.setPatternColor(UIPattern.PatternColor(hue: CGFloat(sender.value), saturation: currColor.saturation, brightness: currColor.brightness))
-        content.setNeedsDisplay()
-    }
-    
-    @IBOutlet var saturation: UISlider!
-    @IBAction func saturationSliderChanged(sender: UISlider) {
-        println("Saturation: \(sender.value)")
-        var currColor = content.pattern.color
-        content.pattern.setPatternColor(UIPattern.PatternColor(hue: currColor.hue, saturation: CGFloat(sender.value), brightness: currColor.brightness))
-        content.setNeedsDisplay()
-    }
-    
-    @IBOutlet var brightness: UISlider!
-    @IBAction func brightnessSliderChanged(sender: UISlider) {
-        println("Brightness: \(sender.value)")
-        var currColor = content.pattern.color
-        content.pattern.setPatternColor(UIPattern.PatternColor(hue: currColor.hue, saturation: currColor.saturation, brightness: CGFloat(sender.value)))
-        content.setNeedsDisplay()
-    }
-    
-    
     
 }
 

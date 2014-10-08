@@ -22,7 +22,7 @@ class InfiniteScrollView : UIScrollView {
 
     }
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         println("init3")
         self.contentSize = CGSizeMake(8000, 8000)
