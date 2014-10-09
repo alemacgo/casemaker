@@ -17,7 +17,7 @@ class TileView : UIView {
     
     init(frame: CGRect, tilesize: CGFloat) {
         TILESIZE = tilesize
-        pattern = UIPattern()
+        pattern = UIPattern(type: .Line)
         pattern.generateTranslatedPaths(tilesize, factor: 8)
         
         super.init(frame: frame)
@@ -36,7 +36,7 @@ class TileView : UIView {
     // appeasing the compiler, don't use this initializer
     required init(coder: NSCoder) {
         TILESIZE = 40
-        pattern = UIPattern()
+        pattern = UIPattern(type: .Chevron)
         super.init(coder: coder)
     }
     

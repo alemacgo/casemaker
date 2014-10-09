@@ -17,12 +17,12 @@
 		00991C5C199BDBE900E0A201 /* ZPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C5B199BDBE900E0A201 /* ZPatternsTests.swift */; };
 		00991C68199BDCAF00E0A201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00991C67199BDCAF00E0A201 /* Main.storyboard */; };
 		00991C6E199C293E00E0A201 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C6D199C293E00E0A201 /* TileView.swift */; };
-		A967822719E5B20F006A439F /* Patterns.h in Headers */ = {isa = PBXBuildFile; fileRef = A967822619E5B20F006A439F /* Patterns.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A967822D19E5B20F006A439F /* Patterns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A967822219E5B20F006A439F /* Patterns.framework */; };
-		A967823619E5B20F006A439F /* PatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967823519E5B20F006A439F /* PatternsTests.swift */; };
-		A967823919E5B20F006A439F /* Patterns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A967822219E5B20F006A439F /* Patterns.framework */; };
-		A967823A19E5B20F006A439F /* Patterns.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A967822219E5B20F006A439F /* Patterns.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A97C8BFB19E5A9430052BDCA /* Playgrounds in Resources */ = {isa = PBXBuildFile; fileRef = A97C8BFA19E5A9420052BDCA /* Playgrounds */; };
+		A99ACD2219E716A80076D8FB /* ThisProject.h in Headers */ = {isa = PBXBuildFile; fileRef = A99ACD2119E716A80076D8FB /* ThisProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A99ACD2819E716A80076D8FB /* ThisProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; };
+		A99ACD3119E716A80076D8FB /* ThisProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99ACD3019E716A80076D8FB /* ThisProjectTests.swift */; };
+		A99ACD3419E716A80076D8FB /* ThisProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; };
+		A99ACD3519E716A80076D8FB /* ThisProject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,26 +33,26 @@
 			remoteGlobalIDString = 00991C42199BDBE900E0A201;
 			remoteInfo = ZPatterns;
 		};
-		A967822E19E5B20F006A439F /* PBXContainerItemProxy */ = {
+		A99ACD2919E716A80076D8FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00991C3B199BDBE900E0A201 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A967822119E5B20F006A439F;
-			remoteInfo = Patterns;
+			remoteGlobalIDString = A99ACD1C19E716A80076D8FB;
+			remoteInfo = ThisProject;
 		};
-		A967823019E5B20F006A439F /* PBXContainerItemProxy */ = {
+		A99ACD2B19E716A80076D8FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00991C3B199BDBE900E0A201 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 00991C42199BDBE900E0A201;
 			remoteInfo = ZPatterns;
 		};
-		A967823719E5B20F006A439F /* PBXContainerItemProxy */ = {
+		A99ACD3219E716A80076D8FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00991C3B199BDBE900E0A201 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A967822119E5B20F006A439F;
-			remoteInfo = Patterns;
+			remoteGlobalIDString = A99ACD1C19E716A80076D8FB;
+			remoteInfo = ThisProject;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -63,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A967823A19E5B20F006A439F /* Patterns.framework in Embed Frameworks */,
+				A99ACD3519E716A80076D8FB /* ThisProject.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,13 +86,13 @@
 		00991C67199BDCAF00E0A201 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00991C69199BE71700E0A201 /* ZPatterns-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZPatterns-Bridging-Header.h"; sourceTree = "<group>"; };
 		00991C6D199C293E00E0A201 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileView.swift; path = ZPatterns/TileView.swift; sourceTree = "<group>"; };
-		A967822219E5B20F006A439F /* Patterns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Patterns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A967822519E5B20F006A439F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A967822619E5B20F006A439F /* Patterns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patterns.h; sourceTree = "<group>"; };
-		A967822C19E5B20F006A439F /* PatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A967823419E5B20F006A439F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A967823519E5B20F006A439F /* PatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsTests.swift; sourceTree = "<group>"; };
 		A97C8BFA19E5A9420052BDCA /* Playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playgrounds; sourceTree = "<group>"; };
+		A99ACD1D19E716A80076D8FB /* ThisProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ThisProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99ACD2019E716A80076D8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99ACD2119E716A80076D8FB /* ThisProject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThisProject.h; sourceTree = "<group>"; };
+		A99ACD2719E716A80076D8FB /* ThisProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThisProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99ACD2F19E716A80076D8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99ACD3019E716A80076D8FB /* ThisProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisProjectTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A967823919E5B20F006A439F /* Patterns.framework in Frameworks */,
+				A99ACD3419E716A80076D8FB /* ThisProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,18 +111,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A967821E19E5B20F006A439F /* Frameworks */ = {
+		A99ACD1919E716A80076D8FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A967822919E5B20F006A439F /* Frameworks */ = {
+		A99ACD2419E716A80076D8FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A967822D19E5B20F006A439F /* Patterns.framework in Frameworks */,
+				A99ACD2819E716A80076D8FB /* ThisProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +145,8 @@
 			children = (
 				00991C45199BDBE900E0A201 /* ZPatterns */,
 				00991C58199BDBE900E0A201 /* ZPatternsTests */,
-				A967822319E5B20F006A439F /* Patterns */,
-				A967823219E5B20F006A439F /* PatternsTests */,
+				A99ACD1E19E716A80076D8FB /* ThisProject */,
+				A99ACD2D19E716A80076D8FB /* ThisProjectTests */,
 				00991C44199BDBE900E0A201 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,8 +156,8 @@
 			children = (
 				00991C43199BDBE900E0A201 /* ZPatterns.app */,
 				00991C55199BDBE900E0A201 /* ZPatternsTests.xctest */,
-				A967822219E5B20F006A439F /* Patterns.framework */,
-				A967822C19E5B20F006A439F /* PatternsTests.xctest */,
+				A99ACD1D19E716A80076D8FB /* ThisProject.framework */,
+				A99ACD2719E716A80076D8FB /* ThisProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,36 +213,36 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		A967822319E5B20F006A439F /* Patterns */ = {
+		A99ACD1E19E716A80076D8FB /* ThisProject */ = {
 			isa = PBXGroup;
 			children = (
-				A967822619E5B20F006A439F /* Patterns.h */,
-				A967822419E5B20F006A439F /* Supporting Files */,
+				A99ACD2119E716A80076D8FB /* ThisProject.h */,
+				A99ACD1F19E716A80076D8FB /* Supporting Files */,
 			);
-			path = Patterns;
+			path = ThisProject;
 			sourceTree = "<group>";
 		};
-		A967822419E5B20F006A439F /* Supporting Files */ = {
+		A99ACD1F19E716A80076D8FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A967822519E5B20F006A439F /* Info.plist */,
+				A99ACD2019E716A80076D8FB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A967823219E5B20F006A439F /* PatternsTests */ = {
+		A99ACD2D19E716A80076D8FB /* ThisProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				A967823519E5B20F006A439F /* PatternsTests.swift */,
-				A967823319E5B20F006A439F /* Supporting Files */,
+				A99ACD3019E716A80076D8FB /* ThisProjectTests.swift */,
+				A99ACD2E19E716A80076D8FB /* Supporting Files */,
 			);
-			path = PatternsTests;
+			path = ThisProjectTests;
 			sourceTree = "<group>";
 		};
-		A967823319E5B20F006A439F /* Supporting Files */ = {
+		A99ACD2E19E716A80076D8FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A967823419E5B20F006A439F /* Info.plist */,
+				A99ACD2F19E716A80076D8FB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,11 +250,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A967821F19E5B20F006A439F /* Headers */ = {
+		A99ACD1A19E716A80076D8FB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A967822719E5B20F006A439F /* Patterns.h in Headers */,
+				A99ACD2219E716A80076D8FB /* ThisProject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +273,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A967823819E5B20F006A439F /* PBXTargetDependency */,
+				A99ACD3319E716A80076D8FB /* PBXTargetDependency */,
 			);
 			name = ZPatterns;
 			productName = ZPatterns;
@@ -298,41 +298,41 @@
 			productReference = 00991C55199BDBE900E0A201 /* ZPatternsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A967822119E5B20F006A439F /* Patterns */ = {
+		A99ACD1C19E716A80076D8FB /* ThisProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A967823B19E5B20F006A439F /* Build configuration list for PBXNativeTarget "Patterns" */;
+			buildConfigurationList = A99ACD3A19E716A80076D8FB /* Build configuration list for PBXNativeTarget "ThisProject" */;
 			buildPhases = (
-				A967821D19E5B20F006A439F /* Sources */,
-				A967821E19E5B20F006A439F /* Frameworks */,
-				A967821F19E5B20F006A439F /* Headers */,
-				A967822019E5B20F006A439F /* Resources */,
+				A99ACD1819E716A80076D8FB /* Sources */,
+				A99ACD1919E716A80076D8FB /* Frameworks */,
+				A99ACD1A19E716A80076D8FB /* Headers */,
+				A99ACD1B19E716A80076D8FB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Patterns;
-			productName = Patterns;
-			productReference = A967822219E5B20F006A439F /* Patterns.framework */;
+			name = ThisProject;
+			productName = ThisProject;
+			productReference = A99ACD1D19E716A80076D8FB /* ThisProject.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A967822B19E5B20F006A439F /* PatternsTests */ = {
+		A99ACD2619E716A80076D8FB /* ThisProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A967823F19E5B20F006A439F /* Build configuration list for PBXNativeTarget "PatternsTests" */;
+			buildConfigurationList = A99ACD3B19E716A80076D8FB /* Build configuration list for PBXNativeTarget "ThisProjectTests" */;
 			buildPhases = (
-				A967822819E5B20F006A439F /* Sources */,
-				A967822919E5B20F006A439F /* Frameworks */,
-				A967822A19E5B20F006A439F /* Resources */,
+				A99ACD2319E716A80076D8FB /* Sources */,
+				A99ACD2419E716A80076D8FB /* Frameworks */,
+				A99ACD2519E716A80076D8FB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A967822F19E5B20F006A439F /* PBXTargetDependency */,
-				A967823119E5B20F006A439F /* PBXTargetDependency */,
+				A99ACD2A19E716A80076D8FB /* PBXTargetDependency */,
+				A99ACD2C19E716A80076D8FB /* PBXTargetDependency */,
 			);
-			name = PatternsTests;
-			productName = PatternsTests;
-			productReference = A967822C19E5B20F006A439F /* PatternsTests.xctest */;
+			name = ThisProjectTests;
+			productName = ThisProjectTests;
+			productReference = A99ACD2719E716A80076D8FB /* ThisProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -352,11 +352,11 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 00991C42199BDBE900E0A201;
 					};
-					A967822119E5B20F006A439F = {
+					A99ACD1C19E716A80076D8FB = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = M599QP4QTK;
 					};
-					A967822B19E5B20F006A439F = {
+					A99ACD2619E716A80076D8FB = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 00991C42199BDBE900E0A201;
 					};
@@ -377,8 +377,8 @@
 			targets = (
 				00991C42199BDBE900E0A201 /* ZPatterns */,
 				00991C54199BDBE900E0A201 /* ZPatternsTests */,
-				A967822119E5B20F006A439F /* Patterns */,
-				A967822B19E5B20F006A439F /* PatternsTests */,
+				A99ACD1C19E716A80076D8FB /* ThisProject */,
+				A99ACD2619E716A80076D8FB /* ThisProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -401,14 +401,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A967822019E5B20F006A439F /* Resources */ = {
+		A99ACD1B19E716A80076D8FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A967822A19E5B20F006A439F /* Resources */ = {
+		A99ACD2519E716A80076D8FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,18 +440,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A967821D19E5B20F006A439F /* Sources */ = {
+		A99ACD1819E716A80076D8FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A967822819E5B20F006A439F /* Sources */ = {
+		A99ACD2319E716A80076D8FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A967823619E5B20F006A439F /* PatternsTests.swift in Sources */,
+				A99ACD3119E716A80076D8FB /* ThisProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,20 +463,20 @@
 			target = 00991C42199BDBE900E0A201 /* ZPatterns */;
 			targetProxy = 00991C56199BDBE900E0A201 /* PBXContainerItemProxy */;
 		};
-		A967822F19E5B20F006A439F /* PBXTargetDependency */ = {
+		A99ACD2A19E716A80076D8FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A967822119E5B20F006A439F /* Patterns */;
-			targetProxy = A967822E19E5B20F006A439F /* PBXContainerItemProxy */;
+			target = A99ACD1C19E716A80076D8FB /* ThisProject */;
+			targetProxy = A99ACD2919E716A80076D8FB /* PBXContainerItemProxy */;
 		};
-		A967823119E5B20F006A439F /* PBXTargetDependency */ = {
+		A99ACD2C19E716A80076D8FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00991C42199BDBE900E0A201 /* ZPatterns */;
-			targetProxy = A967823019E5B20F006A439F /* PBXContainerItemProxy */;
+			targetProxy = A99ACD2B19E716A80076D8FB /* PBXContainerItemProxy */;
 		};
-		A967823819E5B20F006A439F /* PBXTargetDependency */ = {
+		A99ACD3319E716A80076D8FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A967822119E5B20F006A439F /* Patterns */;
-			targetProxy = A967823719E5B20F006A439F /* PBXContainerItemProxy */;
+			target = A99ACD1C19E716A80076D8FB /* ThisProject */;
+			targetProxy = A99ACD3219E716A80076D8FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -621,7 +621,7 @@
 			};
 			name = Release;
 		};
-		A967823C19E5B20F006A439F /* Debug */ = {
+		A99ACD3619E716A80076D8FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -633,9 +633,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Patterns/Info.plist;
+				INFOPLIST_FILE = ThisProject/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -645,7 +645,7 @@
 			};
 			name = Debug;
 		};
-		A967823D19E5B20F006A439F /* Release */ = {
+		A99ACD3719E716A80076D8FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -653,9 +653,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Patterns/Info.plist;
+				INFOPLIST_FILE = ThisProject/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -665,7 +665,7 @@
 			};
 			name = Release;
 		};
-		A967824019E5B20F006A439F /* Debug */ = {
+		A99ACD3819E716A80076D8FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -676,7 +676,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = PatternsTests/Info.plist;
+				INFOPLIST_FILE = ThisProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -684,14 +684,14 @@
 			};
 			name = Debug;
 		};
-		A967824119E5B20F006A439F /* Release */ = {
+		A99ACD3919E716A80076D8FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = PatternsTests/Info.plist;
+				INFOPLIST_FILE = ThisProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,23 +729,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A967823B19E5B20F006A439F /* Build configuration list for PBXNativeTarget "Patterns" */ = {
+		A99ACD3A19E716A80076D8FB /* Build configuration list for PBXNativeTarget "ThisProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A967823C19E5B20F006A439F /* Debug */,
-				A967823D19E5B20F006A439F /* Release */,
+				A99ACD3619E716A80076D8FB /* Debug */,
+				A99ACD3719E716A80076D8FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		A967823F19E5B20F006A439F /* Build configuration list for PBXNativeTarget "PatternsTests" */ = {
+		A99ACD3B19E716A80076D8FB /* Build configuration list for PBXNativeTarget "ThisProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A967824019E5B20F006A439F /* Debug */,
-				A967824119E5B20F006A439F /* Release */,
+				A99ACD3819E716A80076D8FB /* Debug */,
+				A99ACD3919E716A80076D8FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

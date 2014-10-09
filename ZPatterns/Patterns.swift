@@ -27,8 +27,7 @@ class Patterns {
         return [path]
     }
     
-    // A single circle.
-    func circle(color: UIColor) -> [UIPath] {
+    class func line(color: UIColor) -> [UIPath] {
         var circle = UIBezierPath(rect: CGRectMake(0, 0, 80, 40))
         
         var path: UIPath = UIPath(path: circle, color: color.colorWithAlphaComponent(0.2))

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ThisProject.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>ZPatterns.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>A967822B19E5B20F006A439F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99ACD1C19E716A80076D8FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99ACD2619E716A80076D8FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

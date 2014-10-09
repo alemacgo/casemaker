@@ -1,15 +1,15 @@
 //
-//  PatternsTests.swift
-//  PatternsTests
+//  ThisProjectTests.swift
+//  ThisProjectTests
 //
-//  Created by Alejandro on 10/8/14.
+//  Created by Alejandro on 10/9/14.
 //  Copyright (c) 2014 Zazzle. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class PatternsTests: XCTestCase {
+class ThisProjectTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

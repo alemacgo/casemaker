@@ -16,6 +16,9 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     let TILESIZE :CGFloat = 80
     var centerContentOffset: CGPoint!
     
+    @IBOutlet weak var chevronButton: UIButton!
+    @IBOutlet weak var lineButton: UIButton!
+    
     override func viewDidLoad() {
         let f = CGRectMake(0,0,CGFloat(100)*TILESIZE, CGFloat(100)*TILESIZE)
         let MyTileView = TileView(frame:f, tilesize: TILESIZE)
@@ -125,6 +128,26 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         return true
     }
 
+    @IBAction func patternButtonDidTap() {
+        chevronButton.hidden = false
+        lineButton.hidden = false
+    }
+    
+    @IBAction func linePatternButtonDidTap() {
+        self.content.pattern.setPattern(.Line)
+        self.content.setNeedsDisplay()
+        chevronButton.hidden = true
+        lineButton.hidden = true
+    }
+    
+    @IBAction func chevronPatternButtonDidTap() {
+        //self.content.pattern = UIPattern(type: .Chevron)
+        //self.content.pattern.setPattern(.Chevron)
+        self.content.setNeedsDisplay()
+        chevronButton.hidden = true
+        lineButton.hidden = true
+    }
+    
 //    @IBAction func handleRotate(sender: UIRotationGestureRecognizer) {
 //        if abs(sender.rotation) > 0.005 {
 //            content.transform = CGAffineTransformRotate(content.transform, sender.rotation)

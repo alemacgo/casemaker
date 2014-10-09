@@ -9,17 +9,35 @@
 import Foundation
 import UIKit
 
+enum UIPatternType {
+    case Chevron, Line
+}
+
 class UIPattern {
-    var paths: [UIPath]?
+    var paths: [UIPath]
     var color: PatternColor
     
     // Initializes a pattern from the Patterns.swift class.
-    init() {
+    init(type: UIPatternType) {
         color = PatternColor(hue: 1.0, saturation: 1.0, brightness: 1.0)
-        paths = Patterns.chevron(UIPattern.UIColorFromPatternColor(color))
+        switch (type) {
+        case .Chevron:
+            paths = Patterns.chevron(UIPattern.UIColorFromPatternColor(color))
+        case .Line:
+            paths = Patterns.line(UIPattern.UIColorFromPatternColor(color))
+        }
     }
     
-    // Struct used to store pattern color in hsb format because it is 
+    func setPattern(type: UIPatternType) {
+        switch (type) {
+            case .Chevron:
+                paths = Patterns.chevron(UIPattern.UIColorFromPatternColor(color))
+            case .Line:
+                paths = Patterns.line(UIPattern.UIColorFromPatternColor(color))
+        }
+    }
+    
+    // Struct used to store pattern color in hsb format because it is
     // hard to *get* the hsb values from a UIColor
     struct PatternColor {
         var hue: CGFloat
@@ -34,8 +52,8 @@ class UIPattern {
     
     // Calls the renderToContext() method on all the paths in self.paths.
     func renderPatternToContext(context: CGContextRef) {
-        if (!paths!.isEmpty) {
-            for path in paths! {
+        if (!paths.isEmpty) {
+            for path in paths {
                 path.renderToContext(context)
             }
         }
@@ -45,9 +63,9 @@ class UIPattern {
     // within the specified factor.
     func renderPatternGridToContext(context: CGContextRef, factor: Int) {
         for row in 0..<factor {
-            for coloumn in 0..<factor {
-                for path in paths! {
-                    path.translatedPaths![row][coloumn].renderToContext(context)
+            for column in 0..<factor {
+                for path in paths {
+                    path.translatedPaths![row][column].renderToContext(context)
                 }
             }
         }
@@ -55,8 +73,8 @@ class UIPattern {
     
     // Calls the generateTranslatedPath() method on all the paths in self.paths.
     func generateTranslatedPaths(tilesize: CGFloat, factor: Int) {
-        if (!paths!.isEmpty) {
-            for p in paths! {
+        if (!paths.isEmpty) {
+            for p in paths {
                 p.generateTranslatedPaths(tilesize, factor: factor)
             }
         }
@@ -66,7 +84,7 @@ class UIPattern {
     // zoomed in states.
     func setPatternColor(col: PatternColor) {
         self.color = col
-        for p in paths! {
+        for p in paths {
             p.setColor(UIPattern.UIColorFromPatternColor(self.color))
         }
     }

@@ -48,6 +48,20 @@
                ReferencedContainer = "container:ZPatterns.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A99ACD2619E716A80076D8FB"
+               BuildableName = "ThisProjectTests.xctest"
+               BlueprintName = "ThisProjectTests"
+               ReferencedContainer = "container:ZPatterns.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -73,6 +87,16 @@
                BlueprintIdentifier = "A967822B19E5B20F006A439F"
                BuildableName = "PatternsTests.xctest"
                BlueprintName = "PatternsTests"
+               ReferencedContainer = "container:ZPatterns.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A99ACD2619E716A80076D8FB"
+               BuildableName = "ThisProjectTests.xctest"
+               BlueprintName = "ThisProjectTests"
                ReferencedContainer = "container:ZPatterns.xcodeproj">
             </BuildableReference>
          </TestableReference>
