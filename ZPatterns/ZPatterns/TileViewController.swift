@@ -134,7 +134,7 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     }
     
     @IBAction func linePatternButtonDidTap() {
-        self.content.pattern.setPattern(.Line)
+        self.content.changePattern(.Line)
         self.content.setNeedsDisplay()
         chevronButton.hidden = true
         lineButton.hidden = true
@@ -143,6 +143,7 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBAction func chevronPatternButtonDidTap() {
         //self.content.pattern = UIPattern(type: .Chevron)
         //self.content.pattern.setPattern(.Chevron)
+        self.content.changePattern(.Chevron)
         self.content.setNeedsDisplay()
         chevronButton.hidden = true
         lineButton.hidden = true

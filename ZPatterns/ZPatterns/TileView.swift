@@ -13,7 +13,7 @@ import QuartzCore
 
 class TileView : UIView {
     let TILESIZE: CGFloat
-    let pattern: UIPattern
+    var pattern: UIPattern
     
     init(frame: CGRect, tilesize: CGFloat) {
         TILESIZE = tilesize
@@ -90,5 +90,10 @@ class TileView : UIView {
     // i is 300 this will return 240.
     func translateOrigin(i: CGFloat) -> CGFloat {
         return i - i%TILESIZE
+    }
+    
+    func changePattern(type: UIPatternType) {
+        pattern = UIPattern(type: type)
+        pattern.generateTranslatedPaths(TILESIZE, factor: 8)
     }
 }

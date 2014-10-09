@@ -28,15 +28,6 @@ class UIPattern {
         }
     }
     
-    func setPattern(type: UIPatternType) {
-        switch (type) {
-            case .Chevron:
-                paths = Patterns.chevron(UIPattern.UIColorFromPatternColor(color))
-            case .Line:
-                paths = Patterns.line(UIPattern.UIColorFromPatternColor(color))
-        }
-    }
-    
     // Struct used to store pattern color in hsb format because it is
     // hard to *get* the hsb values from a UIColor
     struct PatternColor {
