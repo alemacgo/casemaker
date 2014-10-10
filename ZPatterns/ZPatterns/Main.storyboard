@@ -94,6 +94,11 @@
                                     <action selector="chevronPatternButtonDidTap" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dU6-oc-JVB"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="JCG-Q3-wx0" customClass="CircleButton" customModule="ZPatterns" customModuleProvider="target">
+                                <rect key="frame" x="138" y="455" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

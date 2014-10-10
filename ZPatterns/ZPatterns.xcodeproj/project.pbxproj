@@ -17,6 +17,7 @@
 		00991C5C199BDBE900E0A201 /* ZPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C5B199BDBE900E0A201 /* ZPatternsTests.swift */; };
 		00991C68199BDCAF00E0A201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00991C67199BDCAF00E0A201 /* Main.storyboard */; };
 		00991C6E199C293E00E0A201 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00991C6D199C293E00E0A201 /* TileView.swift */; };
+		A942B07F19E85B0600E219F8 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A942B07E19E85B0600E219F8 /* CircleButton.swift */; };
 		A97C8BFB19E5A9430052BDCA /* Playgrounds in Resources */ = {isa = PBXBuildFile; fileRef = A97C8BFA19E5A9420052BDCA /* Playgrounds */; };
 		A99ACD2219E716A80076D8FB /* ThisProject.h in Headers */ = {isa = PBXBuildFile; fileRef = A99ACD2119E716A80076D8FB /* ThisProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A99ACD2819E716A80076D8FB /* ThisProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; };
@@ -86,6 +87,7 @@
 		00991C67199BDCAF00E0A201 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00991C69199BE71700E0A201 /* ZPatterns-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZPatterns-Bridging-Header.h"; sourceTree = "<group>"; };
 		00991C6D199C293E00E0A201 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileView.swift; path = ZPatterns/TileView.swift; sourceTree = "<group>"; };
+		A942B07E19E85B0600E219F8 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		A97C8BFA19E5A9420052BDCA /* Playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playgrounds; sourceTree = "<group>"; };
 		A99ACD1D19E716A80076D8FB /* ThisProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ThisProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99ACD2019E716A80076D8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		A99ACD2719E716A80076D8FB /* ThisProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThisProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99ACD2F19E716A80076D8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A99ACD3019E716A80076D8FB /* ThisProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisProjectTests.swift; sourceTree = "<group>"; };
+		A99ACD3C19E8555F0076D8FB /* Circle-Shadow.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "Circle-Shadow.playground"; path = "ZPatterns/Playgrounds/Circle-Shadow.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 		00991C3A199BDBE900E0A201 = {
 			isa = PBXGroup;
 			children = (
+				A99ACD3C19E8555F0076D8FB /* Circle-Shadow.playground */,
 				00991C45199BDBE900E0A201 /* ZPatterns */,
 				00991C58199BDBE900E0A201 /* ZPatternsTests */,
 				A99ACD1E19E716A80076D8FB /* ThisProject */,
@@ -208,6 +212,7 @@
 			children = (
 				0087BA5B19A5AC65002E0D7B /* InfiniteScrollView.swift */,
 				00991C6D199C293E00E0A201 /* TileView.swift */,
+				A942B07E19E85B0600E219F8 /* CircleButton.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -425,6 +430,7 @@
 				0087BA5C19A5AC65002E0D7B /* InfiniteScrollView.swift in Sources */,
 				00569436199EE46000DBD236 /* UIPath.swift in Sources */,
 				00991C4B199BDBE900E0A201 /* TileViewController.swift in Sources */,
+				A942B07F19E85B0600E219F8 /* CircleButton.swift in Sources */,
 				00991C49199BDBE900E0A201 /* AppDelegate.swift in Sources */,
 				00991C6E199C293E00E0A201 /* TileView.swift in Sources */,
 				00569434199EE44900DBD236 /* UIPattern.swift in Sources */,
@@ -736,6 +742,7 @@
 				A99ACD3719E716A80076D8FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A99ACD3B19E716A80076D8FB /* Build configuration list for PBXNativeTarget "ThisProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -744,6 +751,7 @@
 				A99ACD3919E716A80076D8FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

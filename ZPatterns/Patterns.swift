@@ -24,13 +24,14 @@ class Patterns {
         chevron.closePath()
         
         var path: UIPath = UIPath(path: chevron, color: color.colorWithAlphaComponent(0.4))
+        println("\(color)")
         return [path]
     }
     
     class func line(color: UIColor) -> [UIPath] {
         var circle = UIBezierPath(rect: CGRectMake(0, 0, 80, 40))
         
-        var path: UIPath = UIPath(path: circle, color: color.colorWithAlphaComponent(0.2))
+        var path: UIPath = UIPath(path: circle, color: color.colorWithAlphaComponent(0.4))
         return [path]
     }
     
