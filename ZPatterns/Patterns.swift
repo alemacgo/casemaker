@@ -23,7 +23,7 @@ class Patterns {
         chevron.addLineToPoint(CGPointMake(40, 0))
         chevron.closePath()
         
-        var path: UIPath = UIPath(path: chevron, color: color.colorWithAlphaComponent(0.4))
+        var path: UIPath = UIPath(path: chevron, color: color)
         println("\(color)")
         return [path]
     }
@@ -31,7 +31,7 @@ class Patterns {
     class func line(color: UIColor) -> [UIPath] {
         var circle = UIBezierPath(rect: CGRectMake(0, 0, 80, 40))
         
-        var path: UIPath = UIPath(path: circle, color: color.colorWithAlphaComponent(0.4))
+        var path: UIPath = UIPath(path: circle, color: color)
         return [path]
     }
     
@@ -70,7 +70,7 @@ class Patterns {
         bezier2Path.closePath()
         bezier2Path.miterLimit = 4;
         
-        var path1: UIPath = UIPath(path: bezier2Path, color: color.colorWithAlphaComponent(0.6))
+        var path1: UIPath = UIPath(path: bezier2Path, color: color)
         
         
         //// Bezier 4 Drawing
@@ -107,7 +107,7 @@ class Patterns {
         bezier4Path.closePath()
         bezier4Path.miterLimit = 4;
         
-        var path2: UIPath = UIPath(path: bezier4Path, color: color.colorWithAlphaComponent(0.8))
+        var path2: UIPath = UIPath(path: bezier4Path, color: color)
         
         
         //// Bezier 6 Drawing
@@ -144,7 +144,7 @@ class Patterns {
         bezier6Path.closePath()
         bezier6Path.miterLimit = 4;
         
-        var path3: UIPath = UIPath(path: bezier6Path, color: color.colorWithAlphaComponent(0.4))
+        var path3: UIPath = UIPath(path: bezier6Path, color: color)
         
         
         //// Bezier 8 Drawing
@@ -181,7 +181,7 @@ class Patterns {
         bezier8Path.closePath()
         bezier8Path.miterLimit = 4;
         
-        var path4: UIPath = UIPath(path: bezier8Path, color: color.colorWithAlphaComponent(0.2))
+        var path4: UIPath = UIPath(path: bezier8Path, color: color)
         
         return [path1, path2, path3, path4]
     }

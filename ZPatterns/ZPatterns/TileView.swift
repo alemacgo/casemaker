@@ -17,7 +17,7 @@ class TileView : UIView {
     
     init(frame: CGRect, tilesize: CGFloat) {
         TILESIZE = tilesize
-        pattern = UIPattern(type: .Line, color: UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
+        pattern = UIPattern(type: .Line, color: UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0))
         pattern.generateTranslatedPaths(tilesize, factor: 8)
         
         super.init(frame: frame)
@@ -58,7 +58,7 @@ class TileView : UIView {
         
         
         let size = max(r.width,r.height)
-        
+
 //        let info = "\(x)\t\t\(y)\t\t Scale: \(scale) \t\t Size: \(size)"
 //        if(debug) { println(info) }
 

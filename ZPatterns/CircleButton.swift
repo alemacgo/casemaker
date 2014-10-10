@@ -11,8 +11,9 @@ import UIKit
 class CircleButton: UIButton {
 
     required init(coder: NSCoder) {
+        //TODO: Remove magic numbers
         super.init(coder: coder)
-        self.backgroundColor = UIColor(red: 0.961, green: 0.478, blue: 0.490, alpha: 1.0)
+        self.backgroundColor = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
         
         self.layer.cornerRadius = self.frame.size.width / 2
         self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).CGColor
