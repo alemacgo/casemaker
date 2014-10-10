@@ -15,30 +15,17 @@ enum UIPatternType {
 
 class UIPattern {
     var paths: [UIPath]
-    var color: PatternColor
+    var color: UIColor
     
     // Initializes a pattern from the Patterns.swift class.
-    init(type: UIPatternType) {
-        color = PatternColor(hue: 1.0, saturation: 1.0, brightness: 1.0)
+    init(type: UIPatternType, color: UIColor) {
         switch (type) {
-        case .Chevron:
-            paths = Patterns.chevron(UIPattern.UIColorFromPatternColor(color))
-        case .Line:
-            paths = Patterns.line(UIPattern.UIColorFromPatternColor(color))
+            case .Chevron:
+                paths = Patterns.chevron(color)
+            case .Line:
+                paths = Patterns.line(color)
         }
-    }
-    
-    // Struct used to store pattern color in hsb format because it is
-    // hard to *get* the hsb values from a UIColor
-    struct PatternColor {
-        var hue: CGFloat
-        var saturation: CGFloat
-        var brightness: CGFloat
-    }
-    
-    // Returns a UIColor from a PatternColor struct
-    private class func UIColorFromPatternColor(col: PatternColor) -> UIColor {
-        return UIColor(hue: col.hue, saturation: col.saturation, brightness: col.brightness, alpha: 1.0)
+        self.color = color
     }
     
     // Calls the renderToContext() method on all the paths in self.paths.
@@ -73,10 +60,9 @@ class UIPattern {
     
     // Sets the color of all the paths in self.paths. Still only works on the
     // zoomed in states.
-    func setPatternColor(col: PatternColor) {
-        self.color = col
+    func setPatternColor(col: UIColor) {
         for p in paths {
-            p.setColor(UIPattern.UIColorFromPatternColor(self.color))
+            p.setColor(self.color)
         }
     }
 }

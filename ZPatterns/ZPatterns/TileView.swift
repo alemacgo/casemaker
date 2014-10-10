@@ -17,7 +17,7 @@ class TileView : UIView {
     
     init(frame: CGRect, tilesize: CGFloat) {
         TILESIZE = tilesize
-        pattern = UIPattern(type: .Line)
+        pattern = UIPattern(type: .Line, color: UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
         pattern.generateTranslatedPaths(tilesize, factor: 8)
         
         super.init(frame: frame)
@@ -36,7 +36,7 @@ class TileView : UIView {
     // appeasing the compiler, don't use this initializer
     required init(coder: NSCoder) {
         TILESIZE = 40
-        pattern = UIPattern(type: .Chevron)
+        pattern = UIPattern(type: .Chevron, color: UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
         super.init(coder: coder)
     }
     
@@ -93,7 +93,7 @@ class TileView : UIView {
     }
     
     func changePattern(type: UIPatternType) {
-        pattern = UIPattern(type: type)
+        pattern = UIPattern(type: type, color: UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
         pattern.generateTranslatedPaths(TILESIZE, factor: 8)
     }
 }
