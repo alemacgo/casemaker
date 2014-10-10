@@ -13,11 +13,15 @@ import QuartzCore
 
 class TileView : UIView {
     let TILESIZE: CGFloat
+    var patternType:UIPatternType
     var pattern: UIPattern
+    var color: UIColor
     
-    init(frame: CGRect, tilesize: CGFloat) {
+    init(frame: CGRect, tilesize: CGFloat, color: UIColor) {
         TILESIZE = tilesize
-        pattern = UIPattern(type: .Line, color: UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0))
+        self.color = color
+        patternType = .Line
+        pattern = UIPattern(type: .Line, color: color)
         pattern.generateTranslatedPaths(tilesize, factor: 8)
         
         super.init(frame: frame)
@@ -26,17 +30,20 @@ class TileView : UIView {
         (layer as CATiledLayer).tileSize = CGSizeMake(tsz, tsz)
         (layer as CATiledLayer).levelsOfDetailBias = 4
         (layer as CATiledLayer).levelsOfDetail = 8
+        println("initted")
     }
 
     // appeasing the compiler, don't use this initializer
     convenience override init() {
-        self.init(frame: (CGRect(x: 0, y: 0, width: 80, height: 80)), tilesize: 40)
+        self.init(frame: (CGRect(x: 0, y: 0, width: 80, height: 80)), tilesize: 40, color:UIColor.whiteColor())
     }
     
     // appeasing the compiler, don't use this initializer
     required init(coder: NSCoder) {
         TILESIZE = 40
         pattern = UIPattern(type: .Chevron, color: UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
+        color = UIColor.whiteColor()
+        patternType = .Line
         super.init(coder: coder)
     }
     
@@ -94,6 +101,11 @@ class TileView : UIView {
     
     func changePattern(type: UIPatternType) {
         pattern = UIPattern(type: type, color: UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
+        pattern.generateTranslatedPaths(TILESIZE, factor: 8)
+    }
+    
+    func changeColor(color: UIColor) {
+        pattern = UIPattern(type: patternType, color: color)
         pattern.generateTranslatedPaths(TILESIZE, factor: 8)
     }
 }

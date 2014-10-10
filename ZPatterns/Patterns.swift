@@ -24,7 +24,6 @@ class Patterns {
         chevron.closePath()
         
         var path: UIPath = UIPath(path: chevron, color: color)
-        println("\(color)")
         return [path]
     }
     

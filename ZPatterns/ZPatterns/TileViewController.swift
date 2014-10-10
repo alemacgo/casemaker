@@ -19,9 +19,18 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBOutlet weak var chevronButton: UIButton!
     @IBOutlet weak var lineButton: UIButton!
     
+    @IBOutlet weak var colorButton: CircleButton!
+    
+    @IBAction func colorButtonDidTap() {
+        content.changeColor(UIColor.blueColor())
+        self.content.setNeedsDisplay()
+    }
+    
+    var color = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
+    
     override func viewDidLoad() {
         let f = CGRectMake(0,0,CGFloat(100)*TILESIZE, CGFloat(100)*TILESIZE)
-        let MyTileView = TileView(frame:f, tilesize: TILESIZE)
+        let MyTileView = TileView(frame:f, tilesize: TILESIZE, color: color)
         
         sv.addSubview(MyTileView)   // adds the TileView to the scrollview
         sv.delegate = self          // sets the scrollview's delegate to this controller

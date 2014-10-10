@@ -94,16 +94,22 @@
                                     <action selector="chevronPatternButtonDidTap" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dU6-oc-JVB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="JCG-Q3-wx0" customClass="CircleButton" customModule="ZPatterns" customModuleProvider="target">
-                                <rect key="frame" x="138" y="455" width="44" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wTO-qq-He8" customClass="CircleButton" customModule="ZPatterns" customModuleProvider="target">
+                                <rect key="frame" x="135" y="456" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="colorButtonDidTap" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wP9-13-vpJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="chevronButton" destination="jvq-52-V3M" id="sja-17-tAF"/>
+                        <outlet property="colorButton" destination="wTO-qq-He8" id="9jQ-Jo-MKC"/>
                         <outlet property="lineButton" destination="5q7-aT-oMB" id="hni-rK-EYb"/>
                         <outlet property="sv" destination="kG4-76-Ez8" id="kM4-z4-jos"/>
                     </connections>

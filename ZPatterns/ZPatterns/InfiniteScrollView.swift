@@ -13,18 +13,15 @@ class InfiniteScrollView : UIScrollView {
     override init() {
         super.init()
         self.contentSize = CGSizeMake(8000, 8000)
-        println("init1")
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        println("init2")
 
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        println("init3")
         self.contentSize = CGSizeMake(8000, 8000)
     }
     
