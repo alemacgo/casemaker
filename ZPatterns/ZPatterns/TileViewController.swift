@@ -25,9 +25,11 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBOutlet weak var lineButton: UIButton!
     
     @IBOutlet weak var colorButton: CircleButton!
+    var colorButtons:[CircleButton] = []
     
     func addColorButton(x: CGFloat) {
         let newButton = CircleButton(frame: CGRectMake(x, topRowY, buttonSize, buttonSize))
+        colorButtons.append(newButton)
         self.view.addSubview(newButton)
     }
     
@@ -52,7 +54,27 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     
     
     @IBAction func colorButtonDidTap(sender: UIButton) {
-        addButtons()
+        // The tag is used as a status. If the button
+        // hasn't been pressed, the tag is 0 and the
+        // color buttons are added to the view.
+        // If it has, the tag is 1 and the color buttons
+        // are removed from the view.
+        if (sender.tag == 0) {
+            addButtons()
+            sender.tag = 1
+        }
+        else {
+            UIView.animateWithDuration(0.3, delay: 0,
+            usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
+                self.colorButton.center.y += (bottomRowY - topRowY)
+            }, {(completed) -> Void in
+                for button in self.colorButtons {
+                    button.removeFromSuperview()
+                }
+                self.colorButtons = []
+                sender.tag = 0
+            })
+        }
     }
     
     var color = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
