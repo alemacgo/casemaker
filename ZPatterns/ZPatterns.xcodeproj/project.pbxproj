@@ -22,8 +22,6 @@
 		A99ACD2219E716A80076D8FB /* ThisProject.h in Headers */ = {isa = PBXBuildFile; fileRef = A99ACD2119E716A80076D8FB /* ThisProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A99ACD2819E716A80076D8FB /* ThisProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; };
 		A99ACD3119E716A80076D8FB /* ThisProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99ACD3019E716A80076D8FB /* ThisProjectTests.swift */; };
-		A99ACD3419E716A80076D8FB /* ThisProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; };
-		A99ACD3519E716A80076D8FB /* ThisProject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A99ACD1D19E716A80076D8FB /* ThisProject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,28 +46,7 @@
 			remoteGlobalIDString = 00991C42199BDBE900E0A201;
 			remoteInfo = ZPatterns;
 		};
-		A99ACD3219E716A80076D8FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00991C3B199BDBE900E0A201 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A99ACD1C19E716A80076D8FB;
-			remoteInfo = ThisProject;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A967823E19E5B20F006A439F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A99ACD3519E716A80076D8FB /* ThisProject.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00569433199EE44900DBD236 /* UIPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPattern.swift; sourceTree = "<group>"; };
@@ -95,7 +72,6 @@
 		A99ACD2719E716A80076D8FB /* ThisProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThisProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99ACD2F19E716A80076D8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A99ACD3019E716A80076D8FB /* ThisProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisProjectTests.swift; sourceTree = "<group>"; };
-		A99ACD3C19E8555F0076D8FB /* Circle-Shadow.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "Circle-Shadow.playground"; path = "ZPatterns/Playgrounds/Circle-Shadow.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99ACD3419E716A80076D8FB /* ThisProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +121,6 @@
 		00991C3A199BDBE900E0A201 = {
 			isa = PBXGroup;
 			children = (
-				A99ACD3C19E8555F0076D8FB /* Circle-Shadow.playground */,
 				00991C45199BDBE900E0A201 /* ZPatterns */,
 				00991C58199BDBE900E0A201 /* ZPatternsTests */,
 				A99ACD1E19E716A80076D8FB /* ThisProject */,
@@ -169,12 +143,12 @@
 		00991C45199BDBE900E0A201 /* ZPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				00991C67199BDCAF00E0A201 /* Main.storyboard */,
+				00991C4A199BDBE900E0A201 /* TileViewController.swift */,
 				005693BC199E7A6200DBD236 /* Models */,
 				A967821C19E5AF8A006A439F /* Views */,
 				A97C8BFA19E5A9420052BDCA /* Playgrounds */,
-				00991C67199BDCAF00E0A201 /* Main.storyboard */,
 				00991C48199BDBE900E0A201 /* AppDelegate.swift */,
-				00991C4A199BDBE900E0A201 /* TileViewController.swift */,
 				00991C4F199BDBE900E0A201 /* Images.xcassets */,
 				00991C46199BDBE900E0A201 /* Supporting Files */,
 				00991C69199BE71700E0A201 /* ZPatterns-Bridging-Header.h */,
@@ -273,12 +247,10 @@
 				00991C3F199BDBE900E0A201 /* Sources */,
 				00991C40199BDBE900E0A201 /* Frameworks */,
 				00991C41199BDBE900E0A201 /* Resources */,
-				A967823E19E5B20F006A439F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A99ACD3319E716A80076D8FB /* PBXTargetDependency */,
 			);
 			name = ZPatterns;
 			productName = ZPatterns;
@@ -478,11 +450,6 @@
 			isa = PBXTargetDependency;
 			target = 00991C42199BDBE900E0A201 /* ZPatterns */;
 			targetProxy = A99ACD2B19E716A80076D8FB /* PBXContainerItemProxy */;
-		};
-		A99ACD3319E716A80076D8FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A99ACD1C19E716A80076D8FB /* ThisProject */;
-			targetProxy = A99ACD3219E716A80076D8FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

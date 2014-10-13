@@ -47,13 +47,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pUN-vE-ADV">
-                                <rect key="frame" x="135" y="508" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="red">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fC6-uV-YG7">
                                 <rect key="frame" x="198" y="508" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -95,13 +88,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wTO-qq-He8" customClass="CircleButton" customModule="ZPatterns" customModuleProvider="target">
-                                <rect key="frame" x="135" y="456" width="44" height="44"/>
+                                <rect key="frame" x="138" y="511" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorButtonDidTap" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wP9-13-vpJ"/>
+                                    <action selector="colorButtonDidTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BDh-dY-NiT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,7 +117,6 @@
         <image name="CaseMaker_main" width="640" height="1136"/>
         <image name="chevron" width="50" height="50"/>
         <image name="line" width="50" height="50"/>
-        <image name="red" width="50" height="50"/>
         <image name="white" width="50" height="50"/>
         <image name="x" width="50" height="50"/>
     </resources>

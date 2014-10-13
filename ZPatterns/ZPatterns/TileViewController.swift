@@ -9,6 +9,11 @@
 import UIKit
 import QuartzCore
 
+let topRowY:CGFloat = 455
+let bottomRowY:CGFloat = 511
+let buttonXSpacing:CGFloat = 63
+let buttonSize:CGFloat = 44
+
 class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScrollViewDelegate {
     @IBOutlet var sv : InfiniteScrollView!
     var content : TileView!
@@ -21,9 +26,33 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     
     @IBOutlet weak var colorButton: CircleButton!
     
-    @IBAction func colorButtonDidTap() {
-        content.changeColor(UIColor.blueColor())
-        self.content.setNeedsDisplay()
+    func addColorButton(x: CGFloat) {
+        let newButton = CircleButton(frame: CGRectMake(x, topRowY, buttonSize, buttonSize))
+        self.view.addSubview(newButton)
+    }
+    
+    func addButtons() {
+        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
+            self.colorButton.center.y -= (bottomRowY - topRowY)
+            }, { (completed) -> Void in
+                //animate with duration + opacity here
+                // Add two buttons to the left
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 - buttonXSpacing)
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 - 2 * buttonXSpacing)
+                
+                // Add two buttons to the right
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 + buttonXSpacing)
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 + 2 * buttonXSpacing)
+                //addColorButton(colorButton.center.x + buttonSize/2 + 2 * buttonXSpacing)
+        })
+        
+        //content.changeColor(UIColor.blueColor())
+        //self.content.setNeedsDisplay()
+    }
+    
+    
+    @IBAction func colorButtonDidTap(sender: UIButton) {
+        addButtons()
     }
     
     var color = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
