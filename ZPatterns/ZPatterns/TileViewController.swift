@@ -14,6 +14,11 @@ let bottomRowY:CGFloat = 511
 let buttonXSpacing:CGFloat = 63
 let buttonSize:CGFloat = 44
 
+let color1 = UIColor(hue:0.303, saturation:0.259, brightness:0.910, alpha:1.0)
+let color2 = UIColor(hue:0.140, saturation:0.267, brightness:1.0, alpha:1.0)
+let color3 = UIColor(hue:0.097, saturation:0.651, brightness:1.0, alpha:1.0)
+let color4 = UIColor(hue:0.051, saturation:0.424, brightness:1.0, alpha:1.0)
+
 class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScrollViewDelegate {
     @IBOutlet var sv : InfiniteScrollView!
     var content : TileView!
@@ -27,8 +32,8 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBOutlet weak var colorButton: CircleButton!
     var colorButtons:[CircleButton] = []
     
-    func addColorButton(x: CGFloat) {
-        let newButton = CircleButton(frame: CGRectMake(x, topRowY, buttonSize, buttonSize))
+    func addColorButton(x: CGFloat, _ color: UIColor) {
+        let newButton = CircleButton(frame: CGRectMake(x, topRowY, buttonSize, buttonSize), color)
         colorButtons.append(newButton)
         self.view.addSubview(newButton)
     }
@@ -39,12 +44,12 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
             }, { (completed) -> Void in
                 //animate with duration + opacity here
                 // Add two buttons to the left
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 - buttonXSpacing)
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 - 2 * buttonXSpacing)
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 - buttonXSpacing, color1)
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 - 2 * buttonXSpacing, color2)
                 
                 // Add two buttons to the right
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 + buttonXSpacing)
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 + 2 * buttonXSpacing)
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 + buttonXSpacing, color3)
+                self.addColorButton(self.colorButton.center.x - buttonSize/2 + 2 * buttonXSpacing, color4)
                 //addColorButton(colorButton.center.x + buttonSize/2 + 2 * buttonXSpacing)
         })
         

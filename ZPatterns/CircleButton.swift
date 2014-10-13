@@ -21,20 +21,21 @@ class CircleButton: UIButton {
         setDefaultAttributes()
     }
     
-    init(frame: CGRect, color: UIColor) {
+    init(frame: CGRect, _ color: UIColor) {
         super.init(frame: frame)
-        self.backgroundColor = color
+        setDefaultAttributes()
+        backgroundColor = color
     }
     
     func setDefaultAttributes() {
         //TODO: Remove magic numbers
-        self.backgroundColor = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
+        backgroundColor = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
     
-        self.layer.cornerRadius = self.frame.size.width / 2
-        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).CGColor
-        self.layer.shadowOpacity = 0.5
-        self.layer.shadowOffset = CGSizeMake(0, 1)
-        self.layer.shadowRadius = 2
+        layer.cornerRadius = self.frame.size.width / 2
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).CGColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSizeMake(0, 1)
+        layer.shadowRadius = 2
     }
 
 }
