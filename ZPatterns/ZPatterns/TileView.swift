@@ -21,7 +21,7 @@ class TileView : UIView {
         TILESIZE = tilesize
         self.color = color
         patternType = .Line
-        pattern = UIPattern(type: .Line, color: color)
+        pattern = UIPattern(type: .Chevron, color: color)
         pattern.generateTranslatedPaths(tilesize, factor: 8)
         
         super.init(frame: frame)

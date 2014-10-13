@@ -34,8 +34,17 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     
     func addColorButton(x: CGFloat, _ color: UIColor) {
         let newButton = CircleButton(frame: CGRectMake(x, topRowY, buttonSize, buttonSize), color)
+        newButton.addTarget(self, action:"setColor:", forControlEvents:.TouchUpInside)
         colorButtons.append(newButton)
         self.view.addSubview(newButton)
+    }
+    
+    func setColor(button:UIButton) {
+        content.changeColor(button.backgroundColor!)
+        let tempColor = colorButton.backgroundColor
+        colorButton.backgroundColor = button.backgroundColor
+        button.backgroundColor = tempColor
+        self.content.setNeedsDisplay()
     }
     
     func addButtons() {
@@ -52,9 +61,6 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
                 self.addColorButton(self.colorButton.center.x - buttonSize/2 + 2 * buttonXSpacing, color4)
                 //addColorButton(colorButton.center.x + buttonSize/2 + 2 * buttonXSpacing)
         })
-        
-        //content.changeColor(UIColor.blueColor())
-        //self.content.setNeedsDisplay()
     }
     
     
