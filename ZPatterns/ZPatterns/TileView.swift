@@ -11,17 +11,17 @@ import UIKit
 import QuartzCore
 
 
-class TileView : UIView {
+class TileView: UIView {
     let TILESIZE: CGFloat
-    var patternType:UIPatternType
+    var patternType: UIPatternType
     var pattern: UIPattern
     var color: UIColor
     
-    init(frame: CGRect, tilesize: CGFloat, color: UIColor) {
+    init(frame: CGRect, tilesize: CGFloat, patternType: UIPatternType, color: UIColor) {
         TILESIZE = tilesize
+        self.patternType = patternType
         self.color = color
-        patternType = .Line
-        pattern = UIPattern(type: .Chevron, color: color)
+        pattern = UIPattern(type: patternType, color: color)
         pattern.generateTranslatedPaths(tilesize, factor: 8)
         
         super.init(frame: frame)
@@ -35,7 +35,7 @@ class TileView : UIView {
 
     // appeasing the compiler, don't use this initializer
     convenience override init() {
-        self.init(frame: (CGRect(x: 0, y: 0, width: 80, height: 80)), tilesize: 40, color:UIColor.whiteColor())
+        self.init(frame: (CGRect(x: 0, y: 0, width: 80, height: 80)), tilesize: 40, patternType:.Line, color:UIColor.whiteColor())
     }
     
     // appeasing the compiler, don't use this initializer

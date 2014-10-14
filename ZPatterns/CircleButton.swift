@@ -29,7 +29,7 @@ class CircleButton: UIButton {
     
     func setDefaultAttributes() {
         //TODO: Remove magic numbers
-        backgroundColor = UIColor(hue: 1.0, saturation: 0.5, brightness: 1.0, alpha: 1.0)
+        backgroundColor = UIColor.whiteColor()
     
         layer.cornerRadius = self.frame.size.width / 2
         layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).CGColor
