@@ -27,6 +27,7 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
 
     let TILESIZE: CGFloat = 80
     var centerContentOffset: CGPoint!
+    var activePatternColorIndex = 0
     
     @IBOutlet weak var chevronButton: UIButton!
     @IBOutlet weak var lineButton: UIButton!
@@ -34,19 +35,28 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
     @IBOutlet weak var colorButton: CircleButton!
     var colorButtons:[CircleButton] = []
     
-    func addColorButton(x: CGFloat, color: UIColor, tag: Int) {
-        let newButton = CircleButton(frame: CGRectMake(x, topRowY, buttonSize, buttonSize), color)
-        newButton.addTarget(self, action:"setColor:", forControlEvents:.TouchUpInside)
+    func loadColorButtons() {
+        var newButton = CircleButton(frame: CGRectMake(colorButton.center.x - buttonSize/2 - buttonXSpacing, topRowY, buttonSize, buttonSize), colors[0])
         colorButtons.append(newButton)
-        newButton.tag = tag
-        self.view.addSubview(newButton)
+        newButton.addTarget(self, action: "setColor:", forControlEvents: .TouchUpInside)
+        
+        newButton = CircleButton(frame: CGRectMake(colorButton.center.x - buttonSize/2 - 2 * buttonXSpacing, topRowY, buttonSize, buttonSize), colors[1])
+        colorButtons.append(newButton)
+        newButton.addTarget(self, action: "setColor:", forControlEvents: .TouchUpInside)
+        
+        newButton = CircleButton(frame: CGRectMake(colorButton.center.x - buttonSize/2 + buttonXSpacing, topRowY, buttonSize, buttonSize), colors[3])
+        colorButtons.append(newButton)
+        newButton.addTarget(self, action: "setColor:", forControlEvents: .TouchUpInside)
+        
+        newButton = CircleButton(frame: CGRectMake(colorButton.center.x - buttonSize/2 + 2 * buttonXSpacing, topRowY, buttonSize, buttonSize), colors[4])
+        colorButtons.append(newButton)
+        newButton.addTarget(self, action:"setColor:", forControlEvents:.TouchUpInside)
     }
     
     func setColor(button:UIButton) {
-        swap(&colors[2], &colors[button.tag])
         button.backgroundColor = colors[button.tag]
         button.setNeedsDisplay()
-        colorButton.backgroundColor = colors[2]
+        //colorButton.backgroundColor = button.backgroundColor
         colorButton.setNeedsDisplay()
         
         content.changeColor(colors[2])
@@ -57,14 +67,10 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
             self.colorButton.center.y -= (bottomRowY - topRowY)
             }, { (completed) -> Void in
-                //animate with duration + opacity here
-                // Add two buttons to the left
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 - buttonXSpacing, color: colors[0], tag: 0)
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 - 2 * buttonXSpacing, color: colors[1], tag: 1)
                 
-                // Add two buttons to the right
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 + buttonXSpacing, color: colors[3], tag: 3)
-                self.addColorButton(self.colorButton.center.x - buttonSize/2 + 2 * buttonXSpacing, color: colors[4], tag: 4)
+                for button in self.colorButtons {
+                    self.view.addSubview(button)
+                }
         })
     }
     
@@ -87,7 +93,6 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
                 for button in self.colorButtons {
                     button.removeFromSuperview()
                 }
-                self.colorButtons = []
                 sender.tag = 0
             })
         }
@@ -104,6 +109,8 @@ class TileViewController : UIViewController, UIGestureRecognizerDelegate, UIScro
         sv.addSubview(MyTileView)   // adds the TileView to the scrollview
         sv.delegate = self          // sets the scrollview's delegate to this controller
         content = MyTileView        // sets the instance variable content to the MyTileView
+        
+        loadColorButtons()
         
         // center the TileView in the scrollview
         centerContentOffset = CGPoint(x: content.frame.size.width/2-sv.bounds.width/2 , y: content.frame.size.height/2-sv.bounds.height/2)
